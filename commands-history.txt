@@ -1,0 +1,9 @@
+docker images : to list all images
+docker build -t lab2-repo1 . : to build docker image called lab2-repo1 in current directory using dockerfile
+docker run lab2-repo1 : to run docker image called lab2-repo1
+docker run -it lab2-repo1 : for this particular lab, it required interactive user input, so option -it needs to be added for it to run correctly
+docker ps : to list all actively running docker containers
+docker run -it --name python-app lab2-repo1 : to create a container called python-app using lab2-repo1 image
+docker start python-app : to start docker container called python-app
+docker exec -it python-app python app.py : to run the already running container called python-app -> running docker ps shows the command to append to the end of "docker exec -it python-app [command]"
+docker exec python-app ls : to list directory contents of container called python-app
